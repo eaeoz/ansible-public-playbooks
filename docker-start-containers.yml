@@ -1,0 +1,7 @@
+- name: Start specific Docker containers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Start Docker containers
+      shell: docker start wizardly_williams nc_nextcloud_1
