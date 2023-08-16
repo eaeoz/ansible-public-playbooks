@@ -1,0 +1,14 @@
+---
+- name: Run Shell Script on Linux
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Copy shell script to remote host
+      copy:
+        src: /test.sh
+        dest: /test.sh
+        mode: 0755  # Set appropriate permissions for the script
+
+    - name: Execute shell script
+      shell: /test.sh
