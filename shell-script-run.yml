@@ -1,12 +1,8 @@
 ---
 - name: Run Shell Script on Linux
-  hosts: all
+  hosts: linux_hosts
   become: true
 
   tasks:
-    - name: Transfer and execute script
-      ansible.builtin.script:
-        src: /test/test.sh
-        creates: /test/test.sh
-        remote_src: yes
-        executable: /bin/bash
+    - name: Execute shell script
+      shell: /test/test.sh
