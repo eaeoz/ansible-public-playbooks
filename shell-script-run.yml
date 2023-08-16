@@ -1,6 +1,6 @@
 ---
 - name: Run Shell Script on Linux
-  hosts: linux_hosts
+  hosts: all
   become: true
 
   tasks:
