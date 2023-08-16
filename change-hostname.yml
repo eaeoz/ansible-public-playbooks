@@ -5,7 +5,7 @@
   tasks:
     - name: Set hostname
       hostname:
-        name: newhostname
+        name: newtesthostname
 
     - name: Update /etc/hosts file
       lineinfile:
