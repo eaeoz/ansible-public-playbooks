@@ -1,0 +1,7 @@
+- name: Stop all Docker containers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Stop Docker containers
+      shell: docker stop $(docker ps -aq)
