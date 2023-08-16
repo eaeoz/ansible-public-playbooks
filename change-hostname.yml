@@ -1,4 +1,4 @@
-- name: Change date, time, and hostname
+- name: Change hostname
   hosts: all
   become: true
 
