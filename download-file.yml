@@ -6,5 +6,5 @@
   tasks:
     - name: Download file
       ansible.builtin.get_url:
-        url: "https://url/logo.png"
-        dest: "/home/user/logo.png"
+        url: "https://<site-domain-name>/logo.png"
+        dest: "/home/<user>/logo.png"
