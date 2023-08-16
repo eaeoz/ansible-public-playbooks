@@ -3,9 +3,6 @@
   become: true
 
   tasks:
-    - name: Set date and time
-      command: date -s "2023-08-17 17:00:00"
-
     - name: Set hostname
       hostname:
         name: newhostname
