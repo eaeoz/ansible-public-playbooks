@@ -9,4 +9,4 @@
         src: /test/test.sh
         creates: /test/test.sh
         remote_src: yes
-        executable: /usr/bin/bash
+        executable: /bin/bash
