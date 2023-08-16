@@ -4,11 +4,9 @@
   become: true
 
   tasks:
-    - name: Copy shell script to remote host
-      copy:
+    - name: Transfer and execute script
+      ansible.builtin.script:
         src: /test/test.sh
-        dest: /test/test.sh
-        mode: 0755  # Set appropriate permissions for the script
-
-    - name: Execute shell script
-      shell: /test/test.sh
+        creates: /test/test.sh
+        remote_src: yes
+        executable: /bin/bash
