@@ -1,0 +1,17 @@
+- name: Change date, time, and hostname
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Set date and time
+      command: date -s "2023-08-17 17:00:00"
+
+    - name: Set hostname
+      hostname:
+        name: newhostname
+
+    - name: Update /etc/hosts file
+      lineinfile:
+        path: /etc/hosts
+        regexp: '^127.0.0.1'
+        line: '127.0.0.1   localhost newhostname'
