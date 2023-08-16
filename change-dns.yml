@@ -1,0 +1,18 @@
+---
+- name: Change DNS address of Linux clients
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update DNS configuration file
+      lineinfile:
+        path: /etc/resolv.conf
+        regexp: '^nameserver'
+        line: 'nameserver 8.8.8.8'  # Replace with the desired DNS address
+      notify: Restart Network Service
+
+  handlers:
+    - name: Restart Network Service
+      service:
+        name: network
+        state: restarted
