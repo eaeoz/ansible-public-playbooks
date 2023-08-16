@@ -5,4 +5,4 @@
 
   tasks:
     - name: Execute shell script
-      shell: /test/test.sh
+      shell: /test/./test.sh
