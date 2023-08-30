@@ -1,0 +1,8 @@
+---
+- name: Run Shell Script on Linux
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Execute shell script
+      shell: qm start 102
