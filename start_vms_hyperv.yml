@@ -1,0 +1,11 @@
+---
+- name: Start Hyper-V VMs
+  hosts: hyperv_hosts
+  gather_facts: false
+  tasks:
+    - name: Start VMs
+      win_command: Start-VM -Name "{{ item }}"
+      loop:
+        - ubuntu1
+        - ubuntu2
+        - ubuntu3
