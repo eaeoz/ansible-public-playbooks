@@ -7,7 +7,5 @@
   tasks:
     - name: Start VMs
       ansible.posix.command:
-        cmd: qm start {{ item }}
-      loop:
-        - 102
+        cmd: qm start 102
       when: start_vms | default(false)
