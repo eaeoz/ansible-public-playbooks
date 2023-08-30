@@ -1,6 +1,6 @@
 ---
 - name: Start Hyper-V VMs
-  hosts: hyperv_hosts
+  hosts: all
   gather_facts: false
   tasks:
     - name: Start VMs
