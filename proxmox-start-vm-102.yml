@@ -1,8 +1,11 @@
 ---
-- name: Run Shell Script on Linux
+- name: Start Proxmox VMs
   hosts: all
-  become: true
+  gather_facts: false
+  become: yes
 
   tasks:
-    - name: Execute shell script
-      shell: qm start 102
+    - name: Start VMs
+      ansible.posix.command:
+        cmd: qm start 102
+      when: start_vms | default(false)
