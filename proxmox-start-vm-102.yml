@@ -1,0 +1,13 @@
+---
+- name: Start Proxmox VMs
+  hosts: all
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: Start VMs
+      ansible.posix.command:
+        cmd: qm start {{ item }}
+      loop:
+        - 102
+      when: start_vms | default(false)
