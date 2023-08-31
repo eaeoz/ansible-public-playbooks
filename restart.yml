@@ -1,0 +1,9 @@
+---
+- name: Reboot Debian machine
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Reboot the machine
+      reboot:
+        reboot_timeout: 60
