@@ -4,4 +4,4 @@
 
   tasks:
     - name: Start Docker containers
-      shell: docker start wizardly_williams nc_nextcloud_1
+      shell: docker start semaphore_semaphore_1 semaphore_mysql_1 trilium-trilium-1 heimdall freshrss nc-nextcloud-1 mywiki-tiddlywiki-1 wizardly_kilby
