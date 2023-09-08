@@ -8,7 +8,7 @@
       lineinfile:
         path: /etc/resolv.conf
         regexp: '^nameserver'
-        line: 'nameserver 8.8.8.8'  # Replace with the desired DNS address
+        line: 'nameserver 1.1.1.1'  # Replace with the desired DNS address
       notify: Restart Network Service
 
   handlers:
